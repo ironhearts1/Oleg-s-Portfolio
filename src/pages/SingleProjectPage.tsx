@@ -9,12 +9,12 @@ function SingleProjectPage() {
     const location = useLocation();
     const { project, relationalData } = location.state;
 
-    let picsArray = [];
+    let picsArray: Array<string> = [];
 
     for (let value of Object.values(project.pics || {})) {
         if (value === null) {
             continue;
-        } else {
+        } else if (typeof value === "string") {
             picsArray.push(value);
         }
     }
@@ -71,11 +71,18 @@ function SingleProjectPage() {
             <div className="proj-wrapper row mb-2 pb-2">
                 <div className="col-lg-12 col-md-12 ms-lg-4 ms-2">
                     <Carousel controls={false} activeIndex={activePictureIndex} indicators={false} fade={true} onClick={handlePictureClick}>
-                        {picsArray.map((pic, index: number) => {
+                        {picsArray.map((pic: string, index: number) => {
+                            console.log(pic, picsArray);
                             let picURLString = `url(${pic})`;
                             return (
                                 <Carousel.Item key={index}>
-                                    <img className="d-block carousel-image" style={{}} src={`${pic}`} />
+                                    {pic.includes(".mp4") ? (
+                                        <video className="d-block carousel-image" muted={false} autoPlay={true} controls>
+                                            <source src={`${pic}`} type="video/mp4"></source>
+                                        </video>
+                                    ) : (
+                                        <img className="d-block carousel-image" src={`${pic}`} />
+                                    )}
                                 </Carousel.Item>
                             );
                         })}
@@ -93,7 +100,7 @@ function SingleProjectPage() {
                         </div>
                         <div>
                             <ul className="list-unstyled d-flex mb-0">
-                                {picsArray.map((picture, picturesIndex) => {
+                                {picsArray.map((picture: string, picturesIndex: number) => {
                                     return (
                                         <li key={picturesIndex} className="mx-2 picture-item" onClick={() => setActivePictureIndex(picturesIndex)}>
                                             {activePictureIndex == picturesIndex ? <span className="active-pic">{picturesIndex + 1}</span> : <span>{picturesIndex + 1}</span>}

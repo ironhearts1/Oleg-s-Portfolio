@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ContactPage() {
@@ -70,7 +70,7 @@ function ContactPage() {
                         <h1 style={extraMarginBottom} ref={sectionOneHeader}></h1>
                         {/*//@ts-ignore*/}
                         <a href={sectionOneFileDownload} target="_blank" download>
-                            <FontAwesomeIcon icon={faPaperclip} />
+                            <FontAwesomeIcon icon={faFileArrowDown} />
                         </a>
                     </div>
                     <p className="mb-5 pb-5" ref={sectionOneTxt}></p>
@@ -78,7 +78,7 @@ function ContactPage() {
                         <h1 style={extraMarginBottom} ref={sectionTwoHeader}></h1>
                         {/*//@ts-ignore*/}
                         <a href={sectionTwoFileDownload} target="_blank" download>
-                            <FontAwesomeIcon icon={faPaperclip} />
+                            <FontAwesomeIcon icon={faFileArrowDown} />
                         </a>
                     </div>
                     <p className="mb-5 pb-5" ref={sectionTwoTxt}></p>
@@ -86,7 +86,7 @@ function ContactPage() {
                         <h1 style={extraMarginBottom}>Resume</h1>
                         {/*//@ts-ignore*/}
                         <a href={CV} target="_blank" download>
-                            <FontAwesomeIcon icon={faPaperclip} />
+                            <FontAwesomeIcon icon={faFileArrowDown} />
                         </a>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ function ContactPage() {
                         <h1 style={extraMarginBottom} ref={sectionOneHeader}></h1>
                         {/*//@ts-ignore*/}
                         <a href={sectionOneFileDownload} target="_blank" download>
-                            <FontAwesomeIcon icon={faPaperclip} />
+                            <FontAwesomeIcon icon={faFileArrowDown} />
                         </a>
                     </div>
                     <p className="mb-5 pb-5" ref={sectionOneTxt}></p>
@@ -105,7 +105,7 @@ function ContactPage() {
                         <h1 style={extraMarginBottom}>Resume</h1>
                         {/*//@ts-ignore*/}
                         <a href={CV} target="_blank" download>
-                            <FontAwesomeIcon icon={faPaperclip} />
+                            <FontAwesomeIcon icon={faFileArrowDown} />
                         </a>
                     </div>
                 </div>
