@@ -77,7 +77,7 @@ function SingleProjectPage() {
                             return (
                                 <Carousel.Item key={index}>
                                     {pic.includes(".mp4") ? (
-                                        <video className="d-block carousel-image" muted={false} autoPlay={true} controls>
+                                        <video className="d-block carousel-image" muted={false} autoPlay={true} controls loop>
                                             <source src={`${pic}`} type="video/mp4"></source>
                                         </video>
                                     ) : (
