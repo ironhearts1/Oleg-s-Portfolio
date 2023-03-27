@@ -79,6 +79,9 @@ function ProjectsPage() {
                     );
                 })}
             </div>
+            <footer className="mt-5 pb-5 proj-page-footer">
+                <span>Website made by Joshua Massanopoli! Contact at joshmass1998@gmail.com</span>
+            </footer>
         </div>
     );
 }

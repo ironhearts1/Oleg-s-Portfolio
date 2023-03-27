@@ -206,3 +206,12 @@ body {
         max-width: 95%;
     }
 }
+
+.proj-page-footer {
+    font-size: 0.85em;
+    text-align: end;
+    @media (max-width: 650px) {
+        text-align: center;
+        font-size: 0.8em;
+    }
+}
