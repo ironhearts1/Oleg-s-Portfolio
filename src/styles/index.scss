@@ -157,6 +157,15 @@ body {
 
 .next-btn {
     color: $base-txt-clr;
+    :hover {
+        color: grey;
+    }
+    :active {
+        color: grey;
+    }
+    :visited {
+        color: grey;
+    }
 }
 
 @media (max-width: 500px) {

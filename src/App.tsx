@@ -11,16 +11,16 @@ function App() {
     let url = /[^/]*$/.exec(window.location.href);
     useEffect(() => {
         url = /[^/]*$/.exec(window.location.href);
-
+        console.log(url);
         //@ts-ignore
         if (url[0] === "") {
             //@ts-ignore
             setOnPage("projects");
         }
         //@ts-ignore
-        if (url[0] != "home" && url[0] != "contact" && url[0] != "projects") {
+        else if (url[0] != "home" && url[0] != "contact" && url[0] != "projects") {
             //@ts-ignore
-            url[0] = "projects";
+            navContext.displayNone();
         }
     }, []);
 

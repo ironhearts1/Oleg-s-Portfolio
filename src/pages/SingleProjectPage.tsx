@@ -70,14 +70,13 @@ function SingleProjectPage() {
             </div>
             <div className="proj-wrapper row mb-2 pb-2">
                 <div className="col-lg-12 col-md-12 ms-lg-4 ms-2">
-                    <Carousel controls={false} activeIndex={activePictureIndex} indicators={false} fade={true} onClick={handlePictureClick}>
+                    <Carousel controls={false} activeIndex={activePictureIndex} indicators={false} fade={true} onClick={handlePictureClick} className="my-3">
                         {picsArray.map((pic: string, index: number) => {
-                            console.log(pic, picsArray);
                             let picURLString = `url(${pic})`;
                             return (
                                 <Carousel.Item key={index}>
                                     {pic.includes(".mp4") ? (
-                                        <video className="d-block carousel-image" muted={false} autoPlay={true} controls loop>
+                                        <video className="d-block carousel-image" muted={true} autoPlay={true} controls loop playsInline={true}>
                                             <source src={`${pic}`} type="video/mp4"></source>
                                         </video>
                                     ) : (
@@ -94,8 +93,8 @@ function SingleProjectPage() {
                                 state={{ project: relationalData[0][prevNextIndex()[1]][1], relationalData: nextRelationalData }}
                                 className="next-btn"
                             >
-                                Next Work
-                                <FontAwesomeIcon className="ps-3" icon={faChevronRight} />
+                                <span className="next-btn">Next Work</span>
+                                <FontAwesomeIcon className="ps-3 next-btn" icon={faChevronRight} />
                             </Link>
                         </div>
                         <div>
